@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>💖 Para Minha Princesa 💖</title>
+<style>
+  body {
+    background-color: #ffe6f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+  }
+  h1 {
+    color: #ff4d6d;
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.3em;
+    color: #333;
+    white-space: pre-line;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  img {
+    max-width: 300px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255, 77, 109, 0.5);
+  }
+  .emoji {
+    position: absolute;
+    font-size: 2em;
+    animation: fall linear infinite;
+  }
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>💖 Para o amor da minha vida 💖</h1>
+  <p>
+Eu só queria aproveitar um momento pra te lembrar do quanto você é especial pra mim. Às vezes, no dia a dia, a gente esquece de dizer as coisas simples, mas que carregam um peso enorme, você é uma das melhores partes da minha vida.
+
+Eu amo o jeito como você me acalma quando tudo parece bagunçado, como você me faz rir até nos dias ruins e como estar ao seu lado sempre me traz paz. Com você, até o silêncio é bom.
+
+Eu sei que a vida nem sempre é fácil, mas eu quero que você saiba que eu tô aqui pra segurar sua mão, pra te ouvir, pra rir junto e pra te apoiar em tudo. Eu te admiro, te respeito e te amo mais do que consigo colocar em palavras.
+
+Você é meu lugar seguro, eu sempre vou te amar garota. ❤️
+  </p>
+  <img src="https://i.imgur.com/EhRZR7b.jpg" alt="Nossa foto" />
+
+  <!-- Player do Spotify -->
+  <iframe src="https://open.spotify.com/embed/track/7lOvJBqH38ZY59eLU7bioq?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+  <script>
+    const emojis = ["💖", "💕", "💞", "💘", "💓", "❤️"];
+    function createEmoji() {
+      const emoji = document.createElement("div");
+      emoji.classList.add("emoji");
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.animationDuration = Math.random() * 3 + 2 + "s";
+      document.body.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 5000);
+    }
+    setInterval(createEmoji, 200);
+  </script>
+</body>
+</html>
